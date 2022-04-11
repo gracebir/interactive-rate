@@ -43,7 +43,7 @@ const Paragraph = styled.p`
 const Rate = styled.div`
     display: flex;
     gap: .9em;
-    margin: 1em 0;
+    margin: 1.5em 0;
     width: 100%;
 `
 
@@ -64,29 +64,29 @@ const SubmitButton = styled.button`
 `
 
 function RateCard() {
-  return (
-    <Container>
-     <RatingStar>
-         <img src={Star} alt="" />
-     </RatingStar>
-     <H1>How did we do?</H1>
-     <Paragraph>
-        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
-     </Paragraph>
-     <form>
-     <Rate>
-        <RateButton rateNumber={1}/>
-        <RateButton rateNumber={2}/>
-        <RateButton rateNumber={3}/>
-        <RateButton rateNumber={4}/>
-        <RateButton rateNumber={5}/>
-     </Rate>
-     <SubmitButton type="submit">
-         Submit
-     </SubmitButton>
-     </form>
-    </Container>
-  )
+    return (
+        <Container>
+            <RatingStar>
+                <img src={Star} alt="" />
+            </RatingStar>
+            <H1>How did we do?</H1>
+            <Paragraph>
+                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+            </Paragraph>
+            <form>
+                <Rate>
+                    <RateButton rateNumber={1} />
+                    <RateButton rateNumber={2} />
+                    <RateButton rateNumber={3} />
+                    <RateButton rateNumber={4} />
+                    <RateButton rateNumber={5} />
+                </Rate>
+                <SubmitButton type="submit">
+                    Submit
+                </SubmitButton>
+            </form>
+        </Container>
+    )
 }
 
 export default RateCard

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import RateCard from "./components/RateCard";
+import { useRoutes } from 'react-router-dom'
+import Rating from "./components/InfoRateCard";
 
 const BodyContainer = styled.div`
  display: flex;
@@ -9,9 +11,21 @@ const BodyContainer = styled.div`
 `
 
 function App() {
+
+  const mainRoute = {
+    path: '/',
+    element: <RateCard />
+  }
+
+  const rateRoute = {
+    path: '/rating',
+    element: <Rating />
+  }
+
+  const routing = useRoutes([mainRoute, rateRoute])
   return (
     <BodyContainer>
-      <RateCard/>
+      {routing}
     </BodyContainer>
   );
 }
