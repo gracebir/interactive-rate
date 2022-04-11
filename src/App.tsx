@@ -1,9 +1,18 @@
+import styled from "styled-components";
+import RateCard from "./components/RateCard";
+
+const BodyContainer = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+`
 
 function App() {
   return (
-    <div>
-      <h1>interactive rate site</h1>
-    </div>
+    <BodyContainer>
+      <RateCard/>
+    </BodyContainer>
   );
 }
 
