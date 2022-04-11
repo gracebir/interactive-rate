@@ -25,7 +25,7 @@ function App() {
   const routing = useRoutes([mainRoute, rateRoute])
   return (
     <BodyContainer>
-      {routing}
+        {routing}
     </BodyContainer>
   );
 }

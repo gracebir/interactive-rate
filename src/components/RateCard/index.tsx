@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Star from '../../icon-star.svg'
 import RateButton from "./RateButton";
+import { useNavigate } from 'react-router-dom'
 
 const Container = styled.div`
     max-width: 20rem;
@@ -64,6 +65,12 @@ const SubmitButton = styled.button`
 `
 
 function RateCard() {
+    const navigate = useNavigate();
+
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
+        e.preventDefault()
+        navigate('/rating')
+    }
     return (
         <Container>
             <RatingStar>
@@ -71,9 +78,10 @@ function RateCard() {
             </RatingStar>
             <H1>How did we do?</H1>
             <Paragraph>
-                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+                Please let us know how we did with your support request. 
+                All feedback is appreciated to help us improve our offering!
             </Paragraph>
-            <form>
+            <form onSubmit={onSubmit}>
                 <Rate>
                     <RateButton rateNumber={1} />
                     <RateButton rateNumber={2} />
